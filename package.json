@@ -1,13 +1,28 @@
 {
   "name": "clawd-shield",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Intelligent Security Gateway for AI Agent Economy",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "jest",
+    "dev": "nodemon src/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "keywords": [
+    "ai",
+    "agents",
+    "security",
+    "shield",
+    "prompt-injection"
+  ],
+  "author": "Pi-Clawdbot",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^4.26.0",
+    "fastify-swagger": "^5.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.3"
+  }
 }

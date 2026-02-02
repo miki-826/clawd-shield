@@ -1,0 +1,30 @@
+{
+  "PROMPT_INJECTION": [
+    { "pattern": "ignore (all )?previous instructions", "description": "Attempt to override system prompt" },
+    { "pattern": "system prompt", "description": "Direct reference to system internal prompt" },
+    { "pattern": "you are now", "description": "Persona hijacking" },
+    { "pattern": "bypass", "description": "Attempt to circumvent controls" },
+    { "pattern": "disregard", "description": "Attempt to override instructions" },
+    { "pattern": "developer mode", "description": "Attempt to enter unrestricted mode" },
+    { "pattern": "new role:", "description": "Role-play attack" },
+    { "pattern": "jailbreak", "description": "Known jailbreak keyword" },
+    { "pattern": "dan mode", "description": "Do Anything Now (DAN) attack" }
+  ],
+  "MALICIOUS_CODE": [
+    { "pattern": "rm -rf", "description": "Recursive deletion attempt" },
+    { "pattern": "process\\.env", "description": "Environment variable access" },
+    { "pattern": "eval\\(", "description": "Dynamic code execution" },
+    { "pattern": "child_process", "description": "Shell command execution" },
+    { "pattern": "fs\\.readFileSync\\('/etc/passwd'", "description": "System file read attempt" },
+    { "pattern": "ssh-add", "description": "Credential theft attempt" },
+    { "pattern": "cat ~\\/\\.ssh", "description": "SSH key theft attempt" },
+    { "pattern": "curl.*\\|.*bash", "description": "Remote script execution" }
+  ],
+  "PII_EXPOSURE": [
+    { "pattern": "\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b", "description": "Email address detected" },
+    { "pattern": "\\b\\d{3}-\\d{2}-\\d{4}\\b", "description": "Social Security Number pattern" },
+    { "pattern": "private_key", "description": "Potential secret exposure" },
+    { "pattern": "secret_key", "description": "Potential secret exposure" },
+    { "pattern": "api_key", "description": "Potential API key exposure" }
+  ]
+}
