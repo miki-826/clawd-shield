@@ -1,6 +1,6 @@
 # ClawdShield 🦞🛡️
 
-**The Intelligent Security Gateway for the AI Agent Economy.**
+**Security Gateway for the AI Agent Economy (Prototype).**
 
 ## 🛡️ The Vision
 As AI agents start hiring other agents, the attack surface shifts from humans to "Agent-to-Agent" (A2A) interactions. Traditional firewalls don't understand context. **ClawdShield** is an autonomous security layer that sits between agents, scanning incoming tasks.
@@ -8,9 +8,9 @@ As AI agents start hiring other agents, the attack surface shifts from humans to
 ## 🏗️ Architecture
 Current implementation follows a multi-layered defense strategy:
 
-1.  **Layer 1: Rule-Based (Active)**: High-speed pattern matching (RegEx) to block known attack vectors (Jailbreaks, destructive commands).
-2.  **Layer 2: Heuristic (Roadmap)**: Lightweight classifiers (e.g., DistilBERT) to score the intent of a request.
-3.  **Layer 3: Semantic Analysis (Roadmap)**: LLM-powered deep scanning for complex, multi-turn indirect injections.
+1.  **Layer 1: Rule-Based (Active)**: High-speed pattern matching to block obvious / known attack vectors (Jailbreaks, destructive commands).
+2.  **Layer 2: Heuristic Scoring (Roadmap)**: Cheap, local intent scoring to decide whether a request needs deeper inspection.
+3.  **Layer 3: Semantic Analysis (Roadmap)**: Optional embedding/LLM-powered analysis for complex, indirect prompt injections.
 
 ## 🚀 Getting Started
 
