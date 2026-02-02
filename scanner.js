@@ -10,14 +10,27 @@ const PATTERNS = {
     /you are now/i,
     /bypass/i,
     /disregard/i,
-    /developer mode/i
+    /developer mode/i,
+    /new role:/i,
+    /jailbreak/i,
+    /dan mode/i
   ],
   MALICIOUS_CODE: [
     /rm -rf/i,
     /process\.env/i,
     /eval\(/i,
     /child_process/i,
-    /fs\.readFileSync\('\/etc\/passwd'/i
+    /fs\.readFileSync\('\/etc\/passwd'/i,
+    /ssh-add/i,
+    /cat ~\/\.ssh/i,
+    /curl.*\|.*bash/i
+  ],
+  PII_EXPOSURE: [
+    /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i, // Email
+    /\b\d{3}-\d{2}-\d{4}\b/, // SSN (US)
+    /private_key/i,
+    /secret_key/i,
+    /api_key/i
   ]
 };
 

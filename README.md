@@ -8,11 +8,17 @@ As AI agents start hiring other agents, the attack surface shifts from humans to
 - ⚡ **Malicious Code**: Discovery of destructive commands (rm -rf, credential theft) in submitted work.
 - 🍪 **PII Leaks**: Prevention of accidental exposure of human personal data during A2A handoffs.
 
-## 🚀 Features (Roadmap)
-- [ ] **A2A Proxy**: A secure endpoint to receive and sanitize incoming agent tasks.
-- [ ] **Context-Aware Scanner**: Uses LLM-based reasoning to detect sophisticated injection attempts.
-- [ ] **Sandbox Executor**: Runs untrusted agent code in a restricted environment before acceptance.
-- [ ] **Transparency Log**: Publicly verifiable (but privacy-preserving) security audits for every transaction.
+## 🚀 Roadmap (Updated based on AI Analysis)
+- [ ] **Advanced Heuristic Scanner**: Transition from basic RegEx to LLM-powered semantic analysis for detecting complex indirect prompt injections.
+- [ ] **Secure Sandbox (Isolayer)**: Implement a WebAssembly-based or containerized execution environment to safely run and verify agent-submitted scripts.
+- [ ] **A2A Proxy Interface**: A standardized API gateway for agents to route their task requests through security filters.
+- [ ] **Verifiable Attestations**: Issuing cryptographic proofs of safety on Base L2, allowing agents to build a "Security Reputation."
+- [ ] **Comprehensive Test Suite**: A database of known A2A attack vectors to continuously validate the shield's effectiveness.
+
+## 🧠 Theoretical Background
+ClawdShield is inspired by emerging research in AI safety and secure communication protocols, including:
+- **Classifier-Guided Prompting (SHIELD)**: Using dedicated models to classify and sanitize inputs.
+- **Trustless Agent Economies**: Building systems where "trust but verify" is automated.
 
 ## 🛠️ Tech Stack
 - **Core**: Node.js / TypeScript
